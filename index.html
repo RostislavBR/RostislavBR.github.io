@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Diplom projeckt</title>
+	<link rel="stylesheet" type="text/css" href="swiper/swiper.min.css">
+	<link rel="stylesheet" href="css/diplom.css">
+	<script src="https://use.fontawesome.com/cb17120122.js"></script>
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- <script src="js/inputmask.js"></script> -->
+	<script src="js/jquery.inputmask.min.js"></script>
+</head>
+<body>
+	<div class="site-container">
+		<div id="popup">
+			<h3 class="title popup__title">Введите ваши данные для обратной связи</h3>
+			<form class="popup__form form-body" id="form" action="#" enctype="multipart/form-data" method="POST">
+				<label class="popup__form-label">
+					<span class="popup__others-element">Введите ваше Имя:</span>
+					<input class="aplication-name _req" name="name" id="name" type="text" placeholder="Укажите ваше имя">
+				</label>
+				<label class="popup__form-label">
+					<span class="popup__others-element">Введите ваш номер телефона:</span>
+					<input class="application-phone _req" name="tel" id="phone" type="tel" placeholder="+7 (999)-999-99-99">
+				</label>
+				<label class="popup__form-label">
+					<span class="popup__others-element">Введите ваш коментарий:</span>
+					<textarea id="text" class="comment-text" name="text"></textarea>
+				</label>
+				<button type="submit" class="popup__button-send">Отправить</button>
+			</form>
+			<button class="popup__button-close" onclick="toggle()">X</button>
+		</div>
+		<header class="header">
+			<div class="container header__container">
+				<div class="toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<nav class="nav header__nav">
+					<ul class="list nav__list">
+						<li class='list__item list__item--top'><a href="#" class="nav-link">Услуги</a></li>
+						<li class="list__item list__item--top"><a href="#" class="nav-link link-focus">Портфолио</a></li>
+						<li class="list__item list__item--top"><a href="#" class="nav-link">Стоимость</a></li>
+					</ul>
+				</nav>
+				<a href="tel:+74999955577" class="header__phone phone">+7 (499) 995-55-77</a>
+				<button class="header__button-phone" onclick="toggle()">Заказать звонок</button>
+				<a href="tel:+74999955577" class="header__button-phone-mobile" onclick="toggle()">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+				</a>
+			</div>
+		</header>
+		<main class="main">
+			<section class="hero">
+				<div class="container hero__container">
+					<span class="fly-tag fly-tag--braces">{&nbsp;}</span>
+					<span class="fly-tag fly-tag--div">&lt;div&gt;</span>
+					<span class="fly-tag fly-tag--hash">#</span>
+					<span class="fly-tag fly-tag--div2">&lt;div&gt;</span>
+					<span class="fly-tag fly-tag--closed">&lt;/&gt;</span>	
+					<span class="fly-tag fly-tag--closed2">&lt;/&gt;</span>	
+					<div class="info hero__info">
+						<h1 class="title hero__title">Дмитрий Алексеев</h1>
+						<span class="hero__sub-title">Frontend-разработчик и веб-верстальщик</span>
+						<button class="hero__btn" onclick="toggle()">Узнать больше</button>
+					</div>
+					<div class="hero-img-svg">
+						<img src="css/img/man.png" alt="man" class="image hero__image">
+						<picture>
+							<img src="css/img/Ellipse_1.svg" alt="ellipse" class="svg hero__svg">
+							<img src="css/img/Ellipse-mob.svg" alt="ellipse-mobile" class="mobile-svg hero__mobile-svg">
+							<img src="css/img/Ellipse-tablet.svg" alt="ellipse-tablet" class="tablet-svg hero__tablet-svg">
+						</picture>
+					</div>
+				</div>
+			</section>
+			<section class="all-information">
+				<div class="container all-information__container">
+					<h2 class="title-others all-information__title">Что я делаю</h2>
+					<ul class="list all-information__list">
+						<li class="all-information__item">
+							<img src='css/img/tools-and-utensils.gif' alt="tools" class="all-information__image">
+							<p class="sub-item all-information__sub-item">Верстка лендинг&ndash;страниц<br> и сайтов любой сложности</p>
+						</li>
+						<li class="all-information__item">
+							<img src="css/img/responsive.gif" alt="responsive" class="all-information__image">
+							<p class="all-information__sub-item">Адаптивная вёрстка под все<br>браузеры и устройства</p>
+						</li>
+						<li class="all-information__item">
+							<img src="css/img/programming.gif" alt="programming" class="all-information__image">
+							<p class="all-information__sub-item">Frontend&ndash;разработка<br> и программирование</p>
+						</li>
+						<li class="all-information__item">
+							<img src="css/img/coding.gif" alt="coding" class="all-information__image">
+							<p class='all-information__sub-item'>Исправление и доработка<br> существующей верскти</p>
+						</li>
+					</ul>
+					<button class="all-information__btn" onclick="toggle()">Узнать стоимость</button>
+				</div>
+			</section>
+			<section class="examples">
+				<div class="container examples__container">
+					<h2 class="title-others examples__titile">Примеры моих <br class="br-mob">работ</h2>
+					<div class="slider-container">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide card">
+									<img src="css/img/LayerPsyho.jpg" alt="psyho">
+									<p class="examples__sub-item">Сайт психолога Веры Антоновой</p>
+								</div>
+								<div class="swiper-slide card">
+									<img src="css/img/LayerKid.jpg" alt="kid">
+									<p class="examples__sub-item desktop-name">Сайт магазина детской одежды</p>
+									<p class="examples__sub-item another-name">Интернет-магазин детской одежды</p>
+								</div>
+								<div class="swiper-slide card">
+									<img src="css/img/LayerFishing.jpg" alt="fishing">
+									<p class="examples__sub-item">Сайт магазина &laquo;Рыболов&raquo;</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<button class="swiper-button-prev"></button>
+						<button class="swiper-button-next"></button>
+					</div>
+					<button class="examples__btn" onclick="toggle()">Заказать проект</button>
+					<button class="examples__btn2" onclick="toggle()">Узнать стоимость</button>
+				</div>
+			</section>
+			<section class="price-tag">
+				<div class="container price-tag__container">
+					<span class="price-tag__fly-tag price-tag__fly-tag--braces">{&nbsp;}</span>
+					<span class="price-tag__fly-tag price-tag__fly-tag--div">&lt;div&gt;</span>
+					<span class="price-tag__fly-tag price-tag__fly-tag--hash">#</span>
+					<span class="price-tag__fly-tag price-tag__fly-tag--braces2">{&nbsp;}</span>
+					<span class="price-tag__fly-tag price-tag__fly-tag--closed">&lt;/&gt;</span>	
+					<h2 class="title-others price-tag__title">Адаптивная вёрстка под все устройства<br> и браузеры от 1000 рублей всего <br class="br-mob">за 4 часа.*</h2>
+					<p class="price-tag__sub-title">Срок и стоимость могут отличаться <br class="br-mob">от заявленных и рассчитываются &nbsp;индивидуально,<br class="br-others"> в зависимости <br class="br-mob">от сложности задач.</p>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<div class="part footer__part--left">
+					<nav class="nav footer__nav">
+						<ul class="list nav__list--footer-left">
+							<li class="list__item list__item--footer-left"><a href="#" class="links footer__links">Услуги</a></li>
+							<li class="list__item list__item--footer-left"><a href="#" class="links footer__links">Портфолио</a></li>
+							<li class="list__item list__item--footer-left"><a href="#" class="links footer__links">Стоимость</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="part footer__part--middle">
+					<ul class="list part__list--middle">
+						<li class="list__item list__item--footer-middle">
+							<a href="tel:+74999957755" class="links footer__links--middle">
+								<i class="fa fa-phone fa-phone--bottom" aria-hidden="true"></i>
+								+7 (499) 995-77-55
+							</a>
+						</li>
+						<li class="list__item list__item--footer-middle">
+							<a href="malito:dmitry@alekseev.com" class="limks footer__links--middle">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								&nbsp;dmitry@alekseev.com
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="part footer__part--right">
+					<button class="footer__btn--right" onclick="toggle()">Заказать звонок</button>
+					<ul class="list part__list--right">
+						<li class="list__item list__item--footer-right"><a href="" class="vk"></a></li>
+						<li class="list__item list__item--footer-right"><a href="" class="facebook"></a></li>
+						<li class="list__item list__item--footer-right"><a href="" class="twitter"></a></li>
+						<li class="list__item list__item--footer-right"><a href="" class="instagram"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="part footer__part--bottom">
+				<p class="footer__text--bottom">&copy; Дмитрий Алексеев, 2016&nbsp;&ndash;&nbsp;2018</p>
+			</div>
+		</footer>
+		<div class="layout"  id="blur"></div>
+	</div>
+	<script src="swiper/swiper.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
